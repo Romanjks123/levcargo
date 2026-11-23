@@ -1,0 +1,1948 @@
+/* ===== Змінні (кольори та розміри з макета Figma) ===== */
+:root {
+  --color-navy: #0f1e2e;
+  --color-navy-dark: #09141f;
+  --color-orange: #f28c28;
+  --color-orange-light: #fdeedf;
+  --color-bg: #f4f6f8;
+  --color-text: #0f1e2e;
+  --color-gray: #5c6a7a;
+  --color-muted: #b8c4d1;
+  --color-line: #e0e5ea;
+  --color-white: #ffffff;
+
+  --font-heading: "Montserrat", Arial, sans-serif;
+  --font-body: "Inter", Arial, sans-serif;
+
+  --container: 1200px;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(15, 30, 46, 0.08);
+}
+
+/* ===== Скидання та базові стилі ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, p, ul, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + 48px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* ===== Кнопки ===== */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 28px;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.btn--outline {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.btn--dark {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* ===== Логотип ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo__text {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.logo__text--light {
+  color: var(--color-white);
+}
+
+/* ===== 1. Шапка ===== */
+.header {
+  position: relative;
+  z-index: 100;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.nav__list {
+  display: flex;
+  gap: 36px;
+}
+
+.nav__link {
+  font-weight: 500;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__phone {
+  font-weight: 600;
+}
+
+/* ===== 2. Перший екран ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 720px;
+  padding: 96px 0;
+  background-color: var(--color-navy);
+  /* фото + градієнт для читабельності тексту; jpg — запасний варіант */
+  background-image:
+    linear-gradient(90deg, rgba(15, 30, 46, 0.96) 0%, rgba(15, 30, 46, 0.8) 50%, rgba(15, 30, 46, 0.25) 100%),
+    url("../img/hero-bg.jpg");
+  background-image:
+    linear-gradient(90deg, rgba(15, 30, 46, 0.96) 0%, rgba(15, 30, 46, 0.8) 50%, rgba(15, 30, 46, 0.25) 100%),
+    image-set(url("../img/hero-bg.webp") type("image/webp"), url("../img/hero-bg.jpg") type("image/jpeg"));
+  background-position: center right;
+  background-size: cover;
+  color: var(--color-white);
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.hero__content {
+  display: flex;
+  flex: 0 1 780px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.hero__badge {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background-color: rgba(242, 140, 40, 0.18);
+  color: var(--color-orange);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.hero__lead {
+  max-width: 560px;
+  color: var(--color-muted);
+  font-size: 20px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.stats {
+  display: flex;
+  gap: 56px;
+  padding-top: 16px;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats__value {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.stats__caption {
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+/* ===== Спільне для секцій ===== */
+.section {
+  padding: 100px 0;
+}
+
+.section--light {
+  background-color: var(--color-bg);
+}
+
+.section--dark {
+  background-color: var(--color-navy);
+}
+
+.section__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.section__eyebrow {
+  color: var(--color-orange);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section__title--light {
+  color: var(--color-white);
+}
+
+.section__subtitle {
+  max-width: 720px;
+  color: var(--color-gray);
+  font-size: 18px;
+}
+
+/* Ряд карток: однакова висота завдяки align-items: stretch (значення за замовчуванням) */
+.cards {
+  display: flex;
+  gap: 24px;
+}
+
+.cards > * {
+  flex: 1 1 0;
+}
+
+.cards--center {
+  align-items: center;
+}
+
+/* ===== 3. Картка послуги ===== */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.service-card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: var(--color-orange-light);
+}
+
+.service-card__title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.service-card__text {
+  color: var(--color-gray);
+  font-size: 15px;
+}
+
+.service-card__link {
+  margin-top: auto; /* посилання притиснуте донизу картки */
+  color: var(--color-orange);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ===== 4. Картка транспорту ===== */
+.truck-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.truck-card__photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.truck-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.truck-card__title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.truck-card__specs {
+  color: var(--color-gray);
+  font-size: 15px;
+}
+
+.truck-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto; /* ціна притиснута донизу */
+}
+
+.truck-card__use {
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+.truck-card__price {
+  color: var(--color-orange);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 5. Картка тарифу ===== */
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 36px;
+  border: 1px solid var(--color-line);
+  border-radius: 20px;
+  background-color: var(--color-white);
+}
+
+.price-card--featured {
+  padding: 48px 36px;
+  border-color: var(--color-navy);
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.price-card__name {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.price-card__price {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.price-card__desc {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-gray);
+  font-size: 15px;
+}
+
+.price-card--featured .price-card__desc {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-muted);
+}
+
+.price-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.price-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-card__features li::before {
+  content: "";
+  flex: 0 0 20px;
+  height: 20px;
+  background: url("../img/icons/check.svg") center / contain no-repeat;
+}
+
+.price-card__btn {
+  margin-top: auto;
+}
+
+/* ===== 6. Картка відгуку ===== */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.review-card__stars {
+  color: var(--color-orange);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.review-card__text {
+  line-height: 1.55;
+}
+
+.review-card__author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.review-card__avatar {
+  display: flex;
+  flex: 0 0 48px;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-orange-light);
+  color: var(--color-orange);
+  font-weight: 600;
+}
+
+.review-card__name {
+  display: block;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.review-card__role {
+  display: block;
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+/* ===== 7. Заявка ===== */
+.order {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.order__info {
+  display: flex;
+  flex: 0 0 460px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.order__info .section__eyebrow {
+  text-align: left;
+}
+
+.order__text {
+  color: var(--color-muted);
+  font-size: 18px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.contacts__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.order-form {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--color-white);
+}
+
+.order-form__title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.order-form__row {
+  display: flex;
+  gap: 20px;
+}
+
+.order-form__row .field {
+  flex: 1;
+  min-width: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field__label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.field__input {
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  padding: 0 16px;
+  border: 1.5px solid var(--color-line);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.field__input--area {
+  height: 110px;
+  padding: 16px;
+  resize: vertical;
+}
+
+/* ===== 8. Футер ===== */
+.footer {
+  padding: 64px 0 32px;
+  background-color: var(--color-navy-dark);
+  color: var(--color-muted);
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__about {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 320px;
+}
+
+.footer__text {
+  font-size: 15px;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__title {
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer__link {
+  font-size: 15px;
+}
+
+.footer__copy {
+  padding-top: 32px;
+  font-size: 14px;
+}
+
+.order__info .section__title {
+  font-size: 40px;
+}
+
+/* =====================================================
+   ЛР3. Випадаюче меню, бургер-меню та адаптивність
+   ===================================================== */
+
+/* ----- Випадаюче меню (ПК) ----- */
+.nav__item--dropdown {
+  position: relative;
+}
+
+.nav__arrow {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  min-width: 270px;
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: var(--color-white);
+  box-shadow: 0 16px 40px rgba(15, 30, 46, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+
+/* «місток», щоб меню не зникало, поки курсор переходить на нього */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.nav__item--dropdown:hover .dropdown,
+.nav__item--dropdown:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav__item--dropdown:hover .nav__arrow,
+.nav__item--dropdown:focus-within .nav__arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown__link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.dropdown__link:hover,
+.dropdown__link:focus-visible {
+  background-color: var(--color-bg);
+  color: var(--color-orange);
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+  color: var(--color-orange);
+}
+
+/* ----- Бургер (на ПК прихований) ----- */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger__line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-navy);
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.burger--active .burger__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger--active .burger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger--active .burger__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav__item--mobile {
+  display: none;
+}
+
+/* ----- Великі екрани (від 1600px) ----- */
+@media (min-width: 1600px) {
+  .hero {
+    padding: 128px 0;
+  }
+}
+
+/* ----- Ноутбуки та планшети горизонтально (до 1199px) ----- */
+@media (max-width: 1199px) {
+  .nav__list {
+    gap: 24px;
+  }
+
+  .header__phone {
+    display: none;
+  }
+
+  .hero__inner {
+    gap: 40px;
+  }
+
+  .hero__title {
+    font-size: 46px;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .cards--services > * {
+    flex: 1 1 calc(50% - 12px);
+  }
+
+  .order {
+    gap: 40px;
+  }
+
+  .order__info {
+    flex-basis: 380px;
+  }
+}
+
+/* ----- Планшети (до 991px): вмикаємо бургер-меню ----- */
+@media (max-width: 991px) {
+  .header {
+    position: sticky;
+    top: 0;
+  }
+
+  .header__inner {
+    padding: 12px 0;
+  }
+
+  .header__actions {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 16px 24px 32px;
+    background-color: var(--color-white);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+  }
+
+  .nav--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-line);
+    font-size: 18px;
+  }
+
+  .nav__arrow {
+    display: none;
+  }
+
+  /* на мобільному підменю показуємо одразу списком */
+  .dropdown {
+    position: static;
+    min-width: 0;
+    margin: 0;
+    padding: 4px 0 8px 16px;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .dropdown::before {
+    display: none;
+  }
+
+  .dropdown__link {
+    padding: 10px 0;
+    color: var(--color-gray);
+  }
+
+  .nav__item--mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 24px;
+  }
+
+  .nav__phone {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hero {
+    padding: 64px 0;
+  }
+
+  .hero__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section__title {
+    font-size: 36px;
+  }
+
+  .cards > *,
+  .cards--services > * {
+    flex: 1 1 calc(50% - 12px);
+  }
+
+  .cards--center {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .order {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .order__info {
+    flex-basis: auto;
+  }
+
+  .footer__top {
+    flex-wrap: wrap;
+  }
+
+  .footer__about {
+    flex-basis: 100%;
+    max-width: none;
+  }
+}
+
+/* ----- Смартфони (до 767px) ----- */
+@media (max-width: 767px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .logo__text {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 48px 0 56px;
+  }
+
+  .hero__content {
+    gap: 20px;
+  }
+
+  .hero__title {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .hero__lead {
+    font-size: 16px;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    align-self: stretch;
+    gap: 12px;
+  }
+
+  .stats {
+    align-self: stretch;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 8px;
+  }
+
+  .stats__value {
+    font-size: 24px;
+  }
+
+  .stats__caption {
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .section__heading {
+    align-items: flex-start;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .section__title,
+  .order__info .section__title {
+    font-size: 28px;
+  }
+
+  .section__subtitle {
+    font-size: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cards--center {
+    align-items: stretch;
+  }
+
+  .price-card,
+  .price-card--featured {
+    padding: 28px;
+  }
+
+  .price-card__price {
+    font-size: 32px;
+  }
+
+  .truck-card__photo {
+    height: 200px;
+  }
+
+  .order-form {
+    padding: 20px;
+  }
+
+  .order-form__row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footer__top {
+    gap: 28px 40px;
+  }
+
+  .footer__col {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* ----- Малі смартфони (до 479px) ----- */
+@media (max-width: 479px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero__title {
+    font-size: 30px;
+  }
+
+  .stats__value {
+    font-size: 20px;
+  }
+
+  .truck-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+}
+
+/* =====================================================
+   ЛР4. Фонові зображення та відео
+   ===================================================== */
+
+/* ----- Секція з фоновим відео ----- */
+.video-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;
+  /* поки відео не завантажилось, видно заставку */
+  background: var(--color-navy) url("../img/video-poster.jpg") center / cover no-repeat;
+  color: var(--color-white);
+}
+
+.video-banner__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 30, 46, 0.94) 0%, rgba(15, 30, 46, 0.75) 55%, rgba(15, 30, 46, 0.35) 100%);
+}
+
+.video-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.video-banner__title {
+  max-width: 640px;
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.video-banner__text {
+  max-width: 560px;
+  color: var(--color-muted);
+  font-size: 18px;
+}
+
+.video-banner__facts {
+  display: flex;
+  gap: 48px;
+  padding-top: 12px;
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+.video-banner__facts strong {
+  display: block;
+  color: var(--color-orange);
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.video-banner__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.video-banner__toggle:hover,
+.video-banner__toggle:focus-visible {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.video-banner__toggle-icon {
+  font-size: 11px;
+  letter-spacing: -2px;
+}
+
+/* Користувачам, які вимкнули анімацію в системі, показуємо лише заставку */
+@media (prefers-reduced-motion: reduce) {
+  .video-banner__video,
+  .video-banner__toggle {
+    display: none;
+  }
+}
+
+/* ----- Адаптивність медійних секцій ----- */
+@media (max-width: 991px) {
+  .hero {
+    min-height: 0;
+  }
+
+  .video-banner {
+    padding: 96px 0;
+  }
+
+  .video-banner__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    background-image:
+      linear-gradient(180deg, rgba(15, 30, 46, 0.9) 0%, rgba(15, 30, 46, 0.82) 100%),
+      url("../img/hero-bg-768.jpg");
+    background-image:
+      linear-gradient(180deg, rgba(15, 30, 46, 0.9) 0%, rgba(15, 30, 46, 0.82) 100%),
+      image-set(url("../img/hero-bg-768.webp") type("image/webp"), url("../img/hero-bg-768.jpg") type("image/jpeg"));
+    background-position: center;
+  }
+
+  .video-banner {
+    padding: 64px 0;
+  }
+
+  .video-banner__overlay {
+    background: rgba(15, 30, 46, 0.82);
+  }
+
+  .video-banner__title {
+    font-size: 28px;
+  }
+
+  .video-banner__text {
+    font-size: 15px;
+  }
+
+  .video-banner__facts {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .video-banner__facts strong {
+    font-size: 26px;
+  }
+}
+
+/* =====================================================
+   ЛР5. Форма заявки та таблиця вартості
+   ===================================================== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ----- Форма ----- */
+.order-form__note {
+  margin-top: -8px;
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+.order-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.order-form__legend {
+  margin-bottom: 4px;
+  padding: 0;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.field__req {
+  color: #d64545;
+}
+
+.field__hint {
+  color: var(--color-gray);
+  font-weight: 400;
+}
+
+.field__input::placeholder {
+  color: #9aa4ae;
+}
+
+.field__input:focus {
+  border-color: var(--color-orange);
+  outline: 3px solid rgba(242, 140, 40, 0.25);
+  outline-offset: 0;
+}
+
+/* стрілка для select */
+.field__select {
+  appearance: none;
+  padding-right: 40px;
+  background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230f1e2e' stroke-width='1.8'/%3E%3C/svg%3E") right 16px center no-repeat;
+  cursor: pointer;
+}
+
+/* помилки показуємо лише після спроби відправки або виходу з поля */
+.field__input.is-invalid {
+  border-color: #d64545;
+  background-color: #fff7f7;
+}
+
+.field__input.is-valid {
+  border-color: #2e9e6a;
+}
+
+.field__error {
+  min-height: 0;
+  color: #d64545;
+  font-size: 13px;
+}
+
+.field__error:empty {
+  display: none;
+}
+
+.field__counter {
+  align-self: flex-end;
+  color: var(--color-gray);
+  font-size: 13px;
+}
+
+/* перемикачі-«таблетки» для radio */
+.choice-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.choice {
+  position: relative;
+  cursor: pointer;
+}
+
+.choice__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.choice__label {
+  display: block;
+  padding: 10px 18px;
+  border: 1.5px solid var(--color-line);
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.choice__input:checked + .choice__label {
+  border-color: var(--color-orange);
+  background-color: var(--color-orange-light);
+  color: #b35f0e;
+}
+
+.choice__input:focus-visible + .choice__label {
+  outline: 3px solid rgba(242, 140, 40, 0.4);
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.checkbox__input {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0;
+  accent-color: var(--color-orange);
+  cursor: pointer;
+}
+
+.order-form__submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.order-form__status:empty {
+  display: none;
+}
+
+.order-form__status {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.order-form__status--success {
+  background-color: #e8f6ef;
+  color: #1d6b47;
+}
+
+.order-form__status--error {
+  background-color: #fdecec;
+  color: #a12c2c;
+}
+
+/* ----- Таблиця вартості ----- */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  text-align: left;
+}
+
+.price-table th,
+.price-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.price-table thead th {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.price-table tbody th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.price-table tbody tr:nth-child(even) {
+  background-color: var(--color-bg);
+}
+
+.price-table tbody tr:hover {
+  background-color: var(--color-orange-light);
+}
+
+/* числові колонки вирівнюємо праворуч */
+.price-table td:nth-child(n+2):nth-child(-n+5),
+.price-table thead th:nth-child(n+2):nth-child(-n+5) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.price-table tfoot td {
+  border-bottom: none;
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+/* ----- Адаптивність форми й таблиці ----- */
+@media (max-width: 1199px) {
+  .order-form__row:has(.field:nth-child(3)) {
+    flex-wrap: wrap;
+  }
+
+  .order-form__row:has(.field:nth-child(3)) .field:first-child {
+    flex-basis: 100%;
+  }
+}
+
+/* На вузьких екранах кожен рядок таблиці стає карткою */
+@media (max-width: 767px) {
+  .table-wrap {
+    overflow: visible;
+    border: none;
+  }
+
+  .price-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .price-table,
+  .price-table tbody,
+  .price-table tr,
+  .price-table th,
+  .price-table td {
+    display: block;
+  }
+
+  .price-table tbody tr {
+    margin-bottom: 16px;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+    background-color: var(--color-white);
+  }
+
+  .price-table tbody tr:nth-child(even) {
+    background-color: var(--color-white);
+  }
+
+  .price-table tbody th {
+    padding: 14px 16px;
+    background-color: var(--color-navy);
+    color: var(--color-white);
+  }
+
+  .price-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 16px;
+    text-align: right;
+  }
+
+  .price-table tbody td::before {
+    content: attr(data-label);
+    color: var(--color-gray);
+    text-align: left;
+  }
+
+  .price-table tbody tr td:last-child {
+    border-bottom: none;
+  }
+
+  .price-table tfoot td {
+    padding: 0;
+  }
+
+  .choice-group {
+    flex-direction: column;
+  }
+
+  .choice__label {
+    border-radius: 10px;
+  }
+}
+
+/* =====================================================
+   ЛР6. UI-компоненти: відступи, кнопки, картки, тарифи
+   ===================================================== */
+
+/* ----- Токени: шкала відступів і стани ----- */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --color-orange-hover: #e07b16;
+  --color-orange-active: #c96d12;
+  --color-navy-hover: #1d3247;
+  --shadow-hover: 0 18px 40px rgba(15, 30, 46, 0.14);
+  --focus-ring: 0 0 0 3px var(--color-white), 0 0 0 6px var(--color-orange);
+  --transition: 0.2s ease;
+}
+
+/* ----- Єдиний стиль фокусу з клавіатури ----- */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+/* ----- Кнопки ----- */
+.btn {
+  gap: var(--space-2);
+  min-height: 52px;
+  transition: background-color var(--transition), border-color var(--transition),
+    color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.btn:focus-visible {
+  border-radius: 10px;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-orange-hover);
+  box-shadow: 0 8px 20px rgba(242, 140, 40, 0.35);
+}
+
+.btn--primary:active {
+  background-color: var(--color-orange-active);
+  box-shadow: none;
+}
+
+.btn--outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+}
+
+.btn--dark:hover {
+  background-color: var(--color-navy-hover);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* на темному фоні кільце фокусу темне всередині */
+.hero .btn:focus-visible,
+.section--dark .btn:focus-visible,
+.video-banner button:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-navy), 0 0 0 6px var(--color-orange);
+}
+
+/* ----- Посилання ----- */
+.nav__link,
+.footer__link,
+.service-card__link,
+.contacts__item a {
+  transition: color var(--transition);
+}
+
+.footer__link:hover,
+.contacts__item a:hover {
+  color: var(--color-orange);
+}
+
+.service-card__link {
+  display: inline-flex;
+  align-self: flex-start;
+  gap: var(--space-1);
+}
+
+.service-card__link:hover {
+  color: var(--color-orange-active);
+}
+
+/* ----- Картки: спільна поведінка ----- */
+.service-card,
+.truck-card,
+.review-card,
+.price-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.service-card:hover,
+.service-card:focus-within,
+.truck-card:hover,
+.review-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* іконка в картці послуги «заливається» кольором */
+.service-card__icon {
+  transition: background-color var(--transition);
+}
+
+.service-card__icon img {
+  transition: filter var(--transition);
+}
+
+.service-card:hover .service-card__icon,
+.service-card:focus-within .service-card__icon {
+  background-color: var(--color-orange);
+}
+
+.service-card:hover .service-card__icon img,
+.service-card:focus-within .service-card__icon img {
+  filter: brightness(0) invert(1);
+}
+
+.truck-card:hover .truck-card__title {
+  color: var(--color-orange);
+}
+
+.truck-card__title {
+  transition: color var(--transition);
+}
+
+/* ----- Блок тарифів ----- */
+.price-card {
+  position: relative;
+  gap: var(--space-5);
+  padding: var(--space-6);
+}
+
+.price-card:hover,
+.price-card:focus-within {
+  border-color: var(--color-orange);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-6px);
+}
+
+.price-card--featured {
+  padding: var(--space-7) var(--space-6);
+  box-shadow: 0 24px 48px rgba(15, 30, 46, 0.25);
+}
+
+.price-card--featured:hover,
+.price-card--featured:focus-within {
+  border-color: var(--color-navy);
+  box-shadow: 0 30px 60px rgba(15, 30, 46, 0.35);
+}
+
+.price-card__badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: var(--space-1) var(--space-4);
+  border-radius: 100px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+.price-card__features {
+  gap: var(--space-3);
+}
+
+.price-card__desc {
+  padding-bottom: var(--space-5);
+}
+
+/* ----- Поля форми: наведення ----- */
+.field__input {
+  transition: border-color var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.field__input:hover:not(:focus) {
+  border-color: #c3ccd5;
+}
+
+.choice__label {
+  transition: border-color var(--transition), background-color var(--transition);
+}
+
+.choice:hover .choice__label {
+  border-color: var(--color-orange);
+}
+
+/* ----- Повага до налаштувань «зменшити рух» ----- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+
+  .service-card:hover,
+  .service-card:focus-within,
+  .truck-card:hover,
+  .review-card:hover,
+  .price-card:hover,
+  .price-card:focus-within {
+    transform: none;
+  }
+}
+
+/* ----- Адаптивність компонентів ----- */
+@media (max-width: 767px) {
+  .price-card,
+  .price-card--featured {
+    padding: var(--space-5);
+  }
+
+  .price-card--featured {
+    padding-top: var(--space-6);
+  }
+
+  .cards--center {
+    gap: var(--space-6);
+  }
+}
+
+/* =====================================================
+   ЛР7. CSS-анімації
+   ===================================================== */
+
+:root {
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* ----- 1. Поява першого екрана при завантаженні ----- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.hero__content > * {
+  animation: fade-up 0.7s var(--ease-out) backwards;
+}
+
+.hero__content > :nth-child(2) { animation-delay: 0.1s; }
+.hero__content > :nth-child(3) { animation-delay: 0.2s; }
+.hero__content > :nth-child(4) { animation-delay: 0.3s; }
+.hero__content > :nth-child(5) { animation-delay: 0.4s; }
+
+/* ----- 2. Поява блоків при прокручуванні (клас додає JS) ----- */
+.js .reveal {
+  opacity: 0;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  /* fill-mode backwards: після завершення анімація не заважає ефектам :hover */
+  animation: fade-up 0.6s var(--ease-out) var(--delay, 0s) backwards;
+}
+
+/* ----- 3. Підкреслення пунктів меню ----- */
+@media (min-width: 992px) {
+  .nav__link {
+    position: relative;
+  }
+
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--color-orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s var(--ease-out);
+  }
+
+  .nav__link:hover::after,
+  .nav__link:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ----- 4. Стрілка в посиланні «Детальніше» ----- */
+.service-card__arrow {
+  display: inline-block;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.service-card__link:hover .service-card__arrow,
+.service-card__link:focus-visible .service-card__arrow {
+  transform: translateX(4px);
+}
+
+/* ----- 5. Індикатор «онлайн» у секції GPS ----- */
+.live {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live__dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3ccf7e;
+}
+
+.live__dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: #3ccf7e;
+  animation: ping 1.8s ease-out infinite;
+}
+
+@keyframes ping {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+/* ----- 6. Спінер на кнопці під час надсилання форми ----- */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn.is-loading::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* ----- Зменшення руху: вимикаємо анімації ----- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+  }
+
+  .live__dot::after {
+    display: none;
+  }
+
+  .btn.is-loading::before {
+    border-color: var(--color-white);
+  }
+}

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вантажні перевезення Львів, Україна, ЄС — ЛевКарго</title>
+  <meta name="description" content="Вантажні перевезення по Україні та в країни ЄС від 1,5 до 20 т. Подача авто у Львові за 2 години, фіксована ціна в договорі, страхування вантажу.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/hero-bg.webp" type="image/webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="img/hero-bg-768.webp" type="image/webp" media="(max-width: 767px)">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 1. Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#">
+        <img class="logo__mark" src="img/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">ЛевКарго</span>
+      </a>
+      <button class="burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="main-nav">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="nav" id="main-nav" aria-label="Головне меню">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--dropdown">
+            <a class="nav__link" href="#services" aria-haspopup="true">Послуги <span class="nav__arrow" aria-hidden="true">▾</span></a>
+            <ul class="dropdown">
+              <li><a class="dropdown__link" href="#services">Перевезення по Україні</a></li>
+              <li><a class="dropdown__link" href="#services">Міжнародні перевезення</a></li>
+              <li><a class="dropdown__link" href="#services">Квартирні й офісні переїзди</a></li>
+              <li><a class="dropdown__link" href="#services">Збірні вантажі</a></li>
+            </ul>
+          </li>
+          <li><a class="nav__link" href="#fleet">Автопарк</a></li>
+          <li><a class="nav__link" href="#pricing">Тарифи</a></li>
+          <li><a class="nav__link" href="#reviews">Відгуки</a></li>
+          <li><a class="nav__link" href="#order">Контакти</a></li>
+          <li class="nav__item--mobile">
+            <a class="nav__phone" href="tel:+380671234567">+38 (067) 123-45-67</a>
+            <a class="btn btn--primary btn--full" href="#order">Замовити перевезення</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header__phone" href="tel:+380671234567">+38 (067) 123-45-67</a>
+        <a class="btn btn--primary" href="#order">Замовити</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. Перший екран -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__badge">Працюємо з 2014 року · Львів</p>
+          <h1 class="hero__title">Вантажні перевезення по Україні та Європі</h1>
+          <p class="hero__lead">Доставимо ваш вантаж вчасно і без пошкоджень: від кількох коробок до повної фури 20 т. Подача авто у Львові — за 2 години.</p>
+          <div class="hero__buttons">
+            <a class="btn btn--primary" href="#order">Замовити перевезення</a>
+            <a class="btn btn--outline" href="#routes">Розрахувати вартість</a>
+          </div>
+          <ul class="stats">
+            <li class="stats__item"><strong class="stats__value">12 років</strong><span class="stats__caption">на ринку перевезень</span></li>
+            <li class="stats__item"><strong class="stats__value">4 500+</strong><span class="stats__caption">виконаних рейсів</span></li>
+            <li class="stats__item"><strong class="stats__value">38 авто</strong><span class="stats__caption">у власному автопарку</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Послуги -->
+    <section class="section section--light" id="services">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Послуги</p>
+          <h2 class="section__title">Що ми перевозимо</h2>
+          <p class="section__subtitle">Беремо на себе весь процес: завантаження, оформлення документів, страхування і доставку до дверей.</p>
+        </div>
+        <div class="cards cards--services">
+          <article class="service-card">
+            <span class="service-card__icon"><img src="img/icons/truck.svg" alt="" width="28" height="28"></span>
+            <h3 class="service-card__title">Перевезення по Україні</h3>
+            <p class="service-card__text">Доставка вантажів до 20 т між містами. Подача авто протягом 2 годин.</p>
+            <a class="service-card__link" href="#order">Детальніше <span class="service-card__arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><img src="img/icons/globe.svg" alt="" width="28" height="28"></span>
+            <h3 class="service-card__title">Міжнародні перевезення</h3>
+            <p class="service-card__text">Польща, Німеччина, Чехія та інші країни ЄС. Митне оформлення під ключ.</p>
+            <a class="service-card__link" href="#order">Детальніше <span class="service-card__arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><img src="img/icons/home.svg" alt="" width="28" height="28"></span>
+            <h3 class="service-card__title">Квартирні й офісні переїзди</h3>
+            <p class="service-card__text">Вантажники, пакування меблів і техніки, збирання та розбирання.</p>
+            <a class="service-card__link" href="#order">Детальніше <span class="service-card__arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><img src="img/icons/box.svg" alt="" width="28" height="28"></span>
+            <h3 class="service-card__title">Збірні вантажі</h3>
+            <p class="service-card__text">Платите лише за свій об’єм — від 1 палети. Відправки щовівторка і п’ятниці.</p>
+            <a class="service-card__link" href="#order">Детальніше <span class="service-card__arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Автопарк -->
+    <section class="section" id="fleet">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Автопарк</p>
+          <h2 class="section__title">Підберемо авто під ваш вантаж</h2>
+          <p class="section__subtitle">Власна техніка, яка щороку проходить техогляд. Кожне авто має GPS-трекер — ви бачите, де ваш вантаж.</p>
+        </div>
+        <div class="cards">
+          <article class="truck-card">
+            <img class="truck-card__photo" src="img/truck-sprinter.jpg" alt="Фургон Mercedes Sprinter з тентом" width="384" height="240">
+            <div class="truck-card__body">
+              <h3 class="truck-card__title">Mercedes Sprinter</h3>
+              <p class="truck-card__specs">Тент · до 1,5 т · 10 м³</p>
+              <div class="truck-card__footer">
+                <span class="truck-card__use">Переїзди і доставка по місту</span>
+                <span class="truck-card__price">від 18 грн/км</span>
+              </div>
+            </div>
+          </article>
+          <article class="truck-card">
+            <img class="truck-card__photo" src="img/truck-man.jpg" alt="Вантажівка MAN TGL біля складу" width="384" height="240">
+            <div class="truck-card__body">
+              <h3 class="truck-card__title">MAN TGL</h3>
+              <p class="truck-card__specs">Тент / рефрижератор · до 10 т · 40 м³</p>
+              <div class="truck-card__footer">
+                <span class="truck-card__use">Міжміські перевезення</span>
+                <span class="truck-card__price">від 32 грн/км</span>
+              </div>
+            </div>
+          </article>
+          <article class="truck-card">
+            <img class="truck-card__photo" src="img/truck-daf.jpg" alt="Тягач DAF XF з тентованим напівпричепом" width="384" height="240">
+            <div class="truck-card__body">
+              <h3 class="truck-card__title">DAF XF фура</h3>
+              <p class="truck-card__specs">Тент · до 20 т · 86 м³</p>
+              <div class="truck-card__footer">
+                <span class="truck-card__use">Повні та міжнародні рейси</span>
+                <span class="truck-card__price">від 45 грн/км</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.1 Медійна секція з фоновим відео -->
+    <section class="video-banner" aria-labelledby="tracking-title">
+      <video class="video-banner__video" autoplay muted loop playsinline preload="none"
+             poster="img/video-poster.webp" aria-hidden="true" tabindex="-1">
+        <source data-src="video/fleet-tracking-640.mp4" type="video/mp4" media="(max-width: 767px)">
+        <source data-src="video/fleet-tracking.mp4" type="video/mp4">
+      </video>
+      <div class="video-banner__overlay"></div>
+      <div class="container video-banner__inner">
+        <p class="section__eyebrow live"><span class="live__dot" aria-hidden="true"></span>GPS-моніторинг 24/7</p>
+        <h2 class="video-banner__title" id="tracking-title">Ви завжди знаєте, де ваш вантаж</h2>
+        <p class="video-banner__text">Кожне авто ЛевКарго обладнане GPS-трекером. Після завантаження ви отримуєте посилання, за яким у реальному часі бачите маршрут і орієнтовний час прибуття.</p>
+        <ul class="video-banner__facts">
+          <li><strong>98%</strong> рейсів вчасно</li>
+          <li><strong>24/7</strong> диспетчерська служба</li>
+          <li><strong>1 млн грн</strong> страхування вантажу</li>
+        </ul>
+        <button class="video-banner__toggle" type="button" aria-pressed="false">
+          <span class="video-banner__toggle-icon" aria-hidden="true">❚❚</span>
+          <span class="video-banner__toggle-text">Пауза відео</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 5. Тарифи -->
+    <section class="section section--light" id="pricing">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Тарифи</p>
+          <h2 class="section__title">Прозорі ціни без доплат</h2>
+          <p class="section__subtitle">Остаточну вартість фіксуємо в договорі ще до завантаження.</p>
+        </div>
+        <div class="cards cards--center">
+          <article class="price-card">
+            <h3 class="price-card__name">Місто</h3>
+            <p class="price-card__price">від 450 грн</p>
+            <p class="price-card__desc">Перевезення в межах Львова та області до 50 км</p>
+            <ul class="price-card__features">
+              <li>Авто до 1,5 т</li>
+              <li>Подача за 1–2 години</li>
+              <li>2 вантажники за потреби</li>
+              <li>Страхування вантажу</li>
+            </ul>
+            <a class="btn btn--dark price-card__btn" href="#order">Обрати тариф</a>
+          </article>
+          <article class="price-card price-card--featured">
+            <p class="price-card__badge">Найпопулярніший</p>
+            <h3 class="price-card__name">Україна</h3>
+            <p class="price-card__price">від 32 грн/км</p>
+            <p class="price-card__desc">Міжміські перевезення в будь-яке місто України</p>
+            <ul class="price-card__features">
+              <li>Авто від 3 до 20 т</li>
+              <li>Відстеження по GPS</li>
+              <li>Документи і накладні</li>
+              <li>Страхування до 1 млн грн</li>
+            </ul>
+            <a class="btn btn--primary price-card__btn" href="#order">Обрати тариф</a>
+          </article>
+          <article class="price-card">
+            <h3 class="price-card__name">Європа</h3>
+            <p class="price-card__price">від 1,4 €/км</p>
+            <p class="price-card__desc">Міжнародні рейси в країни ЄС</p>
+            <ul class="price-card__features">
+              <li>Фури 20 т, тент і реф</li>
+              <li>Митне оформлення</li>
+              <li>CMR-страхування</li>
+              <li>Особистий менеджер</li>
+            </ul>
+            <a class="btn btn--dark price-card__btn" href="#order">Обрати тариф</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.1 Таблиця вартості -->
+    <section class="section" id="routes">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Калькуляція</p>
+          <h2 class="section__title">Скільки коштує доставка зі Львова</h2>
+          <p class="section__subtitle">Орієнтовна вартість перевезення в одному напрямку. Точну ціну менеджер назве після уточнення деталей.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="price-table">
+            <caption class="visually-hidden">Орієнтовна вартість доставки зі Львова залежно від авто</caption>
+            <thead>
+              <tr>
+                <th scope="col">Напрямок</th>
+                <th scope="col">Відстань</th>
+                <th scope="col">Sprinter, до 1,5 т</th>
+                <th scope="col">MAN, до 10 т</th>
+                <th scope="col">DAF, до 20 т</th>
+                <th scope="col">Термін доставки</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-label="Напрямок">Львів → Київ</th>
+                <td data-label="Відстань">540 км</td>
+                <td data-label="Sprinter, до 1,5 т">9 700 грн</td>
+                <td data-label="MAN, до 10 т">17 300 грн</td>
+                <td data-label="DAF, до 20 т">24 300 грн</td>
+                <td data-label="Термін доставки">1 день</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Напрямок">Львів → Житомир</th>
+                <td data-label="Відстань">410 км</td>
+                <td data-label="Sprinter, до 1,5 т">7 400 грн</td>
+                <td data-label="MAN, до 10 т">13 100 грн</td>
+                <td data-label="DAF, до 20 т">18 400 грн</td>
+                <td data-label="Термін доставки">1 день</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Напрямок">Львів → Вінниця</th>
+                <td data-label="Відстань">370 км</td>
+                <td data-label="Sprinter, до 1,5 т">6 700 грн</td>
+                <td data-label="MAN, до 10 т">11 800 грн</td>
+                <td data-label="DAF, до 20 т">16 600 грн</td>
+                <td data-label="Термін доставки">1 день</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Напрямок">Львів → Одеса</th>
+                <td data-label="Відстань">790 км</td>
+                <td data-label="Sprinter, до 1,5 т">14 200 грн</td>
+                <td data-label="MAN, до 10 т">25 300 грн</td>
+                <td data-label="DAF, до 20 т">35 600 грн</td>
+                <td data-label="Термін доставки">1–2 дні</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Напрямок">Львів → Дніпро</th>
+                <td data-label="Відстань">970 км</td>
+                <td data-label="Sprinter, до 1,5 т">17 500 грн</td>
+                <td data-label="MAN, до 10 т">31 000 грн</td>
+                <td data-label="DAF, до 20 т">43 600 грн</td>
+                <td data-label="Термін доставки">1–2 дні</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Напрямок">Львів → Харків</th>
+                <td data-label="Відстань">1 020 км</td>
+                <td data-label="Sprinter, до 1,5 т">18 400 грн</td>
+                <td data-label="MAN, до 10 т">32 600 грн</td>
+                <td data-label="DAF, до 20 т">45 900 грн</td>
+                <td data-label="Термін доставки">2 дні</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6">Ціни вказано без ПДВ і без послуг вантажників. Розрахунок: 18 / 32 / 45 грн за км залежно від авто.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Відгуки -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Відгуки</p>
+          <h2 class="section__title">Нам довіряють</h2>
+          <p class="section__subtitle">Понад 600 компаній і приватних клієнтів зі Львова та всієї України.</p>
+        </div>
+        <div class="cards">
+          <blockquote class="review-card">
+            <p class="review-card__stars" aria-label="Оцінка 5 з 5">★★★★★</p>
+            <p class="review-card__text">«Перевезли офіс за один день: акуратно, без жодної подряпини. Ціна така, як домовлялись.»</p>
+            <footer class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">ОК</span>
+              <span><cite class="review-card__name">Олена Кравець</cite><span class="review-card__role">ТОВ «Західбуд»</span></span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p class="review-card__stars" aria-label="Оцінка 5 з 5">★★★★★</p>
+            <p class="review-card__text">«Возимо з ЛевКарго будматеріали до Києва вже третій рік. Жодного зірваного рейсу.»</p>
+            <footer class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">АМ</span>
+              <span><cite class="review-card__name">Андрій Мельник</cite><span class="review-card__role">керівник складу «БудМаркет»</span></span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p class="review-card__stars" aria-label="Оцінка 5 з 5">★★★★★</p>
+            <p class="review-card__text">«Замовляв фуру до Польщі. Менеджер допоміг з документами, вантаж приїхав на день раніше.»</p>
+            <footer class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">ТГ</span>
+              <span><cite class="review-card__name">Тарас Гнатюк</cite><span class="review-card__role">ФОП, меблевий цех</span></span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Заявка і контакти -->
+    <section class="section section--dark" id="order">
+      <div class="container order">
+        <div class="order__info">
+          <p class="section__eyebrow">Заявка</p>
+          <h2 class="section__title section__title--light">Розрахуємо вартість за 15 хвилин</h2>
+          <p class="order__text">Залиште заявку — менеджер зателефонує, уточнить деталі і назве точну ціну.</p>
+          <ul class="contacts">
+            <li class="contacts__item"><span class="contacts__icon"><img src="img/icons/phone.svg" alt="" width="24" height="24"></span><a href="tel:+380671234567">+38 (067) 123-45-67</a></li>
+            <li class="contacts__item"><span class="contacts__icon"><img src="img/icons/mail.svg" alt="" width="24" height="24"></span><a href="mailto:order@levcargo.com.ua">order@levcargo.com.ua</a></li>
+            <li class="contacts__item"><span class="contacts__icon"><img src="img/icons/pin.svg" alt="" width="24" height="24"></span>Львів, вул. Городоцька, 172</li>
+            <li class="contacts__item"><span class="contacts__icon"><img src="img/icons/clock.svg" alt="" width="24" height="24"></span>Пн–Сб: 8:00–20:00</li>
+          </ul>
+        </div>
+        <form class="order-form" id="order-form" action="https://formsubmit.co/ajax/romaogyn@gmail.com" method="post" novalidate>
+          <h3 class="order-form__title">Заявка на перевезення</h3>
+          <p class="order-form__note">Поля, позначені <span class="field__req" aria-hidden="true">*</span>, обов’язкові для заповнення.</p>
+
+          <fieldset class="order-form__group">
+            <legend class="order-form__legend">Контактні дані</legend>
+            <div class="order-form__row">
+              <div class="field">
+                <label class="field__label" for="f-name">Ваше ім’я <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="f-name" type="text" name="name" placeholder="Наприклад, Роман" autocomplete="name" required minlength="2" maxlength="50" aria-describedby="f-name-error">
+                <p class="field__error" id="f-name-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-phone">Телефон <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="f-phone" type="tel" name="phone" placeholder="+380 67 123 45 67" autocomplete="tel" required pattern="[0-9\s()+\-]{10,20}" aria-describedby="f-phone-error">
+                <p class="field__error" id="f-phone-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-email">Email <span class="field__hint">(необов’язково)</span></label>
+              <input class="field__input" id="f-email" type="email" name="email" placeholder="name@example.com" autocomplete="email" aria-describedby="f-email-error">
+              <p class="field__error" id="f-email-error" aria-live="polite"></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="order-form__group">
+            <legend class="order-form__legend">Маршрут і вантаж</legend>
+            <div class="order-form__row">
+              <div class="field">
+                <label class="field__label" for="f-from">Звідки <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="f-from" type="text" name="from" list="cities" placeholder="Місто відправлення" required aria-describedby="f-from-error">
+                <p class="field__error" id="f-from-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-to">Куди <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="f-to" type="text" name="to" list="cities" placeholder="Місто доставки" required aria-describedby="f-to-error">
+                <p class="field__error" id="f-to-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <datalist id="cities">
+              <option value="Львів"></option>
+              <option value="Київ"></option>
+              <option value="Житомир"></option>
+              <option value="Вінниця"></option>
+              <option value="Одеса"></option>
+              <option value="Дніпро"></option>
+              <option value="Харків"></option>
+              <option value="Варшава"></option>
+              <option value="Краків"></option>
+              <option value="Берлін"></option>
+            </datalist>
+            <div class="order-form__row">
+              <div class="field">
+                <label class="field__label" for="f-cargo">Тип вантажу <span class="field__req" aria-hidden="true">*</span></label>
+                <select class="field__input field__select" id="f-cargo" name="cargo" required aria-describedby="f-cargo-error">
+                  <option value="">Оберіть зі списку</option>
+                  <option>Побутові речі (переїзд)</option>
+                  <option>Меблі та техніка</option>
+                  <option>Будматеріали</option>
+                  <option>Товари на палетах</option>
+                  <option>Продукти (потрібен рефрижератор)</option>
+                  <option>Інше</option>
+                </select>
+                <p class="field__error" id="f-cargo-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-weight">Вага, т <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="f-weight" type="number" name="weight" placeholder="Наприклад, 2" min="0.1" max="20" step="0.1" inputmode="decimal" required aria-describedby="f-weight-error">
+                <p class="field__error" id="f-weight-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-date">Дата <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="f-date" type="date" name="date" required aria-describedby="f-date-error">
+                <p class="field__error" id="f-date-error" aria-live="polite"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="order-form__group">
+            <legend class="order-form__legend">Тип перевезення</legend>
+            <div class="choice-group">
+              <label class="choice"><input class="choice__input" type="radio" name="service" value="По Україні" checked><span class="choice__label">По Україні</span></label>
+              <label class="choice"><input class="choice__input" type="radio" name="service" value="Міжнародне"><span class="choice__label">Міжнародне</span></label>
+              <label class="choice"><input class="choice__input" type="radio" name="service" value="Переїзд"><span class="choice__label">Переїзд</span></label>
+            </div>
+            <label class="checkbox"><input class="checkbox__input" type="checkbox" name="loaders" value="так"><span>Потрібні вантажники</span></label>
+          </fieldset>
+
+          <div class="field">
+            <label class="field__label" for="f-comment">Коментар</label>
+            <textarea class="field__input field__input--area" id="f-comment" name="comment" maxlength="500" placeholder="Що потрібно перевезти, поверх, наявність ліфта…" aria-describedby="f-comment-counter"></textarea>
+            <p class="field__counter" id="f-comment-counter"><span>0</span> / 500</p>
+          </div>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" name="consent" required aria-describedby="f-consent-error">
+            <span>Погоджуюсь з обробкою персональних даних <span class="field__req" aria-hidden="true">*</span></span>
+          </label>
+          <p class="field__error" id="f-consent-error" aria-live="polite"></p>
+
+          <input type="hidden" name="_subject" value="Нова заявка з сайту ЛевКарго">
+          <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <button class="btn btn--primary btn--full order-form__submit" type="submit">Надіслати заявку</button>
+          <p class="order-form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__about">
+          <a class="logo" href="#">
+            <img class="logo__mark" src="img/logo.svg" alt="" width="40" height="40">
+            <span class="logo__text logo__text--light">ЛевКарго</span>
+          </a>
+          <p class="footer__text">Вантажні перевезення по Україні та Європі з 2014 року.</p>
+        </div>
+        <nav class="footer__col" aria-label="Послуги">
+          <h3 class="footer__title">Послуги</h3>
+          <a class="footer__link" href="#services">По Україні</a>
+          <a class="footer__link" href="#services">Міжнародні</a>
+          <a class="footer__link" href="#services">Переїзди</a>
+          <a class="footer__link" href="#services">Збірні вантажі</a>
+        </nav>
+        <nav class="footer__col" aria-label="Компанія">
+          <h3 class="footer__title">Компанія</h3>
+          <a class="footer__link" href="#fleet">Автопарк</a>
+          <a class="footer__link" href="#pricing">Тарифи</a>
+          <a class="footer__link" href="#reviews">Відгуки</a>
+        </nav>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакти</h3>
+          <a class="footer__link" href="tel:+380671234567">+38 (067) 123-45-67</a>
+          <a class="footer__link" href="mailto:order@levcargo.com.ua">order@levcargo.com.ua</a>
+          <span class="footer__link">вул. Городоцька, 172</span>
+        </div>
+      </div>
+      <p class="footer__copy">© 2026 ЛевКарго. Усі права захищені.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
